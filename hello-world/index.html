@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- Put this at the start of every html document --> 
+
+<html lang="en-us"> <!-- root html element --> 
+    <head> <!-- All content not on the page --> 
+        <!-- Metadata --> 
+        <meta charset="utf-8"> <!-- Use utf-8 --> 
+        <meta name="viewport" content="width=device-width"> <!-- Prevents mobile browsers from shrinking --> 
+        <title>Hello World!</title> <!-- Appears in tab, bookmark, search results -->
+        <link href="styles/style.css" rel="stylesheet"> <!-- Import style sheet -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> <!-- Import font style sheet -->
+        <meta name="author" content="Andrew Tan"> <!-- Provides Information -->
+        <meta name="description" content="Yo this is my homemade html page"> <!-- For Search Engines-->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <script src="scripts/my-js-file.js" defer></script>
+    </head>
+    <body> <!-- All content on the page --> 
+        <h1>Big Text</h1> <!-- Use headings mainly for SEO and accessibility, not for the style -->
+        <h2>Smaller Text</h2>
+        <!-- Make your link texts descriptive -->
+        <h3 id="foo">You can create a <a href="#link">link</a> to this heading!</h3>
+        <h4 class="myClass">This item is in a class!</h4>
+        <h2>Text with a <strong>BOLD</strong> and <em>ITALIC</em> and <mark>Highlight</mark>!</h2>
+        <!-- Don't use <i> <b> <u> as they are purely stylistic and so should be CSS -->
+        <h3>Illegal characters: &lt;&gt;&quot;&apos;&amp;</h6>
+        <h2>This contains a <span style="font-size: 20px">SPAN</span> which lets you apply css, js, or target a specific part of text</h2>
+        <h4>Superscript<sup>1</sup> and Subscript<sub>2</sub></h4>
+        <p>Paragraph!</p>
+        <a href="https://picrew.me/image_maker/1171011" target="_blank">
+            <img src="images/download20220800162657.png" alt="Anime Tomboy Image">
+        </a> 
+        <!-- Alt text is useful for screen readers or if the image can't load -->
+        <h2>Unordered List</h2>
+        <ul>
+            <li><a id="projects-link" href="semantics.html">Semantics page</a></li>
+            <li><a id="structure-link" href="structure.html">Structure Page</a></li>
+            <li><a id="multimedia-link" href="multimedia.html">Multimedia Page</a></li>
+            <li><a id="table-link" href="table.html">Table Page</a></li>
+
+        </ul>
+        <h2>Ordered List</h2>
+        <ol>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ol>
+
+        <!-- Setting target to _blank makes the link open in a new tab -->
+        <a href="https://google.com/" title="Tooltip" target="_blank">Woah, it's a link!</a>
+        <a id="link" href="#foo" title="Tooltip">Jump to foo</a>
+        <a href="#top">Jump to top</a>
+        <a href="#bottom">Jump to bottom</a>
+
+        <!-- Provide contact info related to content (can include phone / email too) -->
+        <address>Andrew Tan, 123 Freddy Fazbear Plaza, Hawaii, USA</address> 
+    </body>
+</html>
+
+<!-- 
+Block-level elements form a visible block on a page. 
+A block-level element appears on a new line following the content that precedes it. 
+Any content that follows a block-level element also appears on a new line. 
+Block-level elements are usually structural elements on the page. 
+For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. 
+A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.
+
+Inline elements are contained within block-level elements, and surround only small parts of the 
+document's content (not entire paragraphs or groupings of content). 
+An inline element will not cause a new line to appear in the document. 
+It is typically used with text, for example an <a> element creates a hyperlink, 
+and elements such as <em> or <strong> create emphasis. 
+
+If there's an attribute that only has one possible value (e.g. disabled), you don't have to give it a value 
+Html entities let you use reserved characters (google them) 
+
+Use different tags for their semantic values instead of the styles -->

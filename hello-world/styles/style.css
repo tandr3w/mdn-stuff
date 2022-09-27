@@ -1,0 +1,55 @@
+p{ /* Selector */
+    color: red; /* Property: property value; */
+}
+
+html{ /* Affects the entire page */
+    background-color: #00539F;
+    font-size: 10px; /* default font size  */
+    font-family: "Open Sans", sans-serif; /* default font family */
+}
+
+h1 {
+    margin: 0; /* Override default styling */
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 1px black;
+    /* Horizontal Offset, Vertical Offset, Blur Radius, Shadow Color */
+  }
+  
+p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+img {
+    display: block;
+    /* Block elements take up space on the page*/
+    margin: 0 auto; /* Centers the image by splitting margin evenly */
+  }
+
+body{ /* Affects the entire body (it's like a box or container in flutter) */
+  width: 600px; /* Forces body width to be this */
+  margin: 0 auto; /* Margin is space outside the border*/
+  /*
+  The first value affects the element's top and bottom side (setting it to 0 in this case); 
+  The second value affects the left and right side (auto splits the available space evenly);
+  */
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px; /* Top, right, bottom, left; Padding is the space inside the border */
+  border: 5px solid black;
+}
+
+
+/*
+Selectors
+Default: Changes every element with that name
+#my-id: Changes the element with the id
+.my-class: Changes every element in the class
+element[attribute]: Changes every element with that attribute
+element:state: Changes every element but only when it's in the state (e.g. hover) 
+
+Fonts
+https://fonts.google.com/
+*/
+

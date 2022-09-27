@@ -1,0 +1,25 @@
+body {
+    color: green;
+}
+          
+.my-class-1 a {
+    color: inherit;
+}
+          
+.my-class-2 a {
+    color: initial;
+}
+          
+.my-class-3 a {
+    color: unset;
+}
+
+.my-class-4 a {
+    all: unset;
+}
+
+a[href="https://example.com"] {
+    color:red
+}
+
+/* Specificity in selectors goes in order of ID >> CLASS >> ELEMENT */

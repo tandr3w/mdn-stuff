@@ -1,0 +1,104 @@
+/* Create a font */
+/* @font-face {
+    font-family: "myFont";
+    src: url("myFont.woff2");
+  } */
+
+html{
+    font-size: 10px; /* Makes math with rem easier */
+    font-family: arial, sans-serif, verdana; /* myFont */ 
+    /* Try to use "Web Safe" fonts, or put fonts as fallbacks (font stack) 
+    You can also use "custom web fonts" that are downloaded */
+}
+
+h1 {
+    font-size: 5rem;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.5;
+}
+
+h1 + p {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+p {
+    color: black;
+    font-size: 1.5rem; /* 1 rem = root font size (10px) */
+    font-style: normal; /* Normal or Italic */
+    font-weight: normal; /* Normal, Bold, Lighter, Bolder, or 100-900 */
+    text-transform: none; /* None, Uppercase, Lowercase, Capitalize, Full-width*/
+
+    /* Text-decoration is a shorthand for these*/
+    text-decoration-line: none; /* None, Underline, Overline, Line-through */
+    text-decoration-style: none; /* None, Solid, Double, Dashed, Dotted, Wavy */
+    text-decoration-color: red; /* Color */
+    /* You can put multiple text shadows if you seperate them by comma */
+    text-shadow: 0px 0px 0px red; /* Horizontal Offset, Verical Offset, Blur Radius, Color */
+    text-align: left; /* Left, Right, Center, Justify (Makes lines the same width) */
+    line-height: 1.5; /* Height of the line box (For single lines, make it the same size as the container to center) */
+}
+
+li, dd, dt, p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+dt {
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+ul {
+    list-style-type: circle; /* Choose what the bullets look like (can be none) */
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+/* List-style is the shorthand */
+
+ol, ul {
+    list-style-position: outside; /* Inside, Outside (where are the bullets?) */
+    /* List-style-image: url(FILE_PATH) lets you use an image as the bullets 
+    However, you can do this with background images:
+    ul li {
+        padding-left: 2rem;
+        background-image: url(star.svg);
+        background-position: 0 0;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+    } */
+}
+
+a[href="https://example.com"]:link { /* Does it have a destination? */
+    color: blue;
+}
+
+a[href="https://example.com"]:visited {
+    color: purple;
+}
+
+a[href="https://example.com"]:hover {
+    color: red;
+}
+
+a[href="https://example.com"]:focus {
+    color: orange;
+    border: 1px solid black;
+}
+
+a[href="https://example.com"]:active { /* When clicked on */
+    color: green;
+}
+
+a[href^="http"] { /* External links only */
+    background: url('../assets/icons8-external-link-26.png') no-repeat 100% 0;
+    background-size: 10px 10px;
+    padding-right: 12px;
+}

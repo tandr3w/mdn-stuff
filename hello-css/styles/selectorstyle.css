@@ -1,0 +1,59 @@
+li {
+    list-style-type: none;
+  }
+
+/* Affects the element with the hihoney id */
+#hihoney {
+    color:gold;
+}
+/* Affects every p with class redtext*/
+p.redtext {
+    color: red;
+}
+
+/* Affects every em inside of a li */
+li em {
+    color: purple;
+}
+
+/* Affects every h4 after a p */
+p + h4 {
+    color: blue;
+}
+
+/* You can combine them like this! 
+Affects every h2 after an h4 after a p inside a body */
+body p + h4 + h2{
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}
+
+a:link {
+    color: pink;
+  }
+  
+a:visited {
+    color: green;
+  }
+
+a:hover {
+    color: red;
+  }
+
+/* Sorted by specificity, then cascading */
+h5.specialh5{
+  color: black;
+  transform: rotate(-5deg);
+}
+.specialh5{
+  color: gray;
+  font-weight: bolder;
+}
+
+/* Makes background gray if width is over 1000px */
+@media (min-width: 1000px) {
+  body {
+    background-color: rgb(216, 216, 216);
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="scripts/app.js" defer></script> <!-- When hitting a script, normally, it will stop parsing, download the script, and execute it before continuing. However, if you add the async attribute, the browser will request the JS file, continue parsing the document, but stop and execute the script as soon as it's downloaded. If you add the defer attribute, the browser will similarly download the JS file in the background, but it will wait to execute it until the entire document has been parsed. 
+    
+    Usually, use defer if your script modifies elements on your page, and async if your script runs independently from your other scripts (e.g. a bunch of background scripts that you want asap but not blocking everything else ) -->
+    <title>Apply JavaScript example</title>
+  </head>
+  <body>
+    <h3 id="heading_A"></h3>
+    <button class="btn1">Click me</button>
+    <button class="btn2">Click me for e!</button>
+    <input id="textBox" type="text">
+    <div id="output"></div>
+    <button class="btn3">Display video</button>
+
+    <div class="hidden">
+      <video>
+        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
+        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
+        <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+      </video>
+    </div>
+  </body>
+</html>

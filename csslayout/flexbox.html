@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox 0 — starting code</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: purple;
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+
+      /* Add your flexbox CSS below here */
+
+      /* In flex, elements are laid out in the Main Axis. The Cross-axis is the axis perpendicular to the main axis. */
+      section {
+        display: flex; /* Flex Container */
+        flex-direction: row;
+        /* flex-direction: column; */
+        flex-wrap: wrap; /* Flexboxes will wrap to new lines instead of scrolling */
+        /* Flex-flow is a shorthand for direction and wrap */
+        align-items: stretch; /* Default, will cause items to fill the container's cross axis, or be the same size as the biggest flex item if the container has no height */
+        /* Center will cause items to maintain dimensions but center along the cross-axis */
+        /* Flex-start and flex-end will align items at the start/end of the cross axis */
+        justify-content: start; /* Default, will make items sit at the start */
+        /* End will make items sit at the end */
+        /* Center will make items sit in the middle */
+        /* Space-around will distribute the space evenly with some leftover at the edges */
+        /* Space-between is space-around but without the leftovers */
+      }
+
+      article {
+        flex-grow: 1; /* Priority for the space */
+        flex-basis: 200px; /* Minimum width of flexbox */
+        /* Flex is a shorthand for these two properties and flex-shrink */
+        order: 0; /* Default */
+      }
+
+      article:nth-of-type(3) {
+        flex: 3 200px; /* Similar to expand in flutter -- 3rd article will be wider, and all other ones will be the same width (even if it requires resizing) */
+      }
+
+      article:nth-of-type(4) {
+        order: 1; /* Elements with higher order values will always appear after lower ones */
+        /* Elements are sorted by order > source order
+        order can also be negative */
+        display: flex;
+      }
+
+      button {
+        flex: 1 auto; /* Take as much space as possible */
+        margin: 5px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .buttons {
+        flex: 3 200px;
+        display: flex; /* Another nested flexbox! */
+        align-items: center;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sample flexbox example</h1>
+    </header>
+
+    <section>
+      <article> <!-- Flex Items -->
+        <h2>First article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+      </article>
+
+      <article>
+        <h2>Second article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+      </article>
+
+      <article>
+        <h2>Third article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+      </article>
+      <article> <!-- Flex Items -->
+        <h2>Fourth article (Special!!)</h2>
+
+        <article>
+            <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+        </article>
+        <article>
+            <p>I'm a nested flexbox btw haha, look my display is a column. KSLJFLDKSJLFS LKSJKLFJSDL WIOJ FDOSLJDFLSO JFSDL JFLSDKJFFLSDJ F:LDKSJ KSLJFLDKSJLFS LKSJKLFJSDL WIOJ FDOSLJDFLSO JFSDL JFLSDKJFFLSDJ F:LDKSJ </p>
+        </article>
+        <div class="buttons">
+            <button>Hello!</button>
+            <button>Yo</button>
+            <button>Hello!</button>
+            <button>Yo</button>
+            <button>Hello!</button>
+            <button>Yo</button>
+            <button>Hello!</button>
+            <button>Yo</button>
+            <button>Hello!</button>
+            <button>Yo</button>
+            <button>Hello!</button>
+            <button>Yo</button>
+            <button>Hello!</button>
+            <button>Yo</button>
+            <button>Hello!</button>
+            <button>Yo</button>
+        </div>
+      </article>
+
+      <article>
+        <h2>Fifth article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+      </article>
+
+      <article>
+        <h2>Sixth article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+      </article>
+    </section>
+  </body>
+</html>
